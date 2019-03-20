@@ -23,6 +23,7 @@
 1. 單個字符表示
     * 特定字符: 某個具體的字符 `1`、`a`
         * 指令: `grep '1' passwd`
+        * ![github](raw.githubusercontent.com/ChiaYuSu/linux107b/master/Week%204%20-%20Screenshot/grep%20'1'%20passwd.PNG?token=AZMvABCdS26rG3sn-hgGvGeqzTG4pWh9ks5ckokowA%3D%3D)
     * 範圍內字符: 數字字符 `[0-9]`、小寫字符 `[a-z]`、大寫字符 `[A-Z]`、符號字符 `[,:_/]`、反向字符 `[^]`
         * 指令: `grep '[0-9]' passwd`、`grep '[a-z]' passwd`、`grep '[a-zA-Z]' passwd`、`grep '[,:_/]' passwd`、`grep '[^0-9]' passwd`
         > 注意: 反向字符 `^` 一定要在中括號 `[]` 內
