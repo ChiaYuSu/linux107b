@@ -8,7 +8,7 @@
 * 通配符: 用來匹配符合條件的文件名
 * 正則表達式: 用來匹配符合條件的檔案內容
 ## Linux 三劍客
-* sed (stream editor)：行編輯器
+* sed (stream editor): 行編輯器
 * awk: 文本處理工具
 * grep (global search regular expression(RE) and print out the line): 查找
 ## 從基礎至應用（三個學習階段）
@@ -21,7 +21,7 @@
 * 匹配兩位數、密碼、qq號、身分證字號等
 ## 正則表達式學習方法
 1. 單個字符表示
-    * 特定字符：某個具體的字符
+    * 特定字符: 某個具體的字符
         * 例: `1`、`a`
     * 範圍內字符
     * 任意字符
