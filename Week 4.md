@@ -26,7 +26,21 @@
         * 執行結果: 
          ![github](https://raw.githubusercontent.com/ChiaYuSu/linux107b/master/Week%204%20-%20Screenshot/grep%20'1'%20passwd.PNG?token=AZMvABCdS26rG3sn-hgGvGeqzTG4pWh9ks5ckokowA%3D%3D)
     * 範圍內字符: 數字字符 `[0-9]`、小寫字符 `[a-z]`、大寫字符 `[A-Z]`、符號字符 `[,:_/]`、反向字符 `[^]`
-        * 指令: `grep '[0-9]' passwd`、`grep '[a-z]' passwd`、`grep '[a-zA-Z]' passwd`、`grep '[,:_/]' passwd`、`grep '[^0-9]' passwd`
+        * 指令: `grep '[0-9]' passwd`
+        * 執行結果: 
+         ![github](https://raw.githubusercontent.com/ChiaYuSu/linux107b/master/Week%204%20-%20Screenshot/grep%20'%5B0-9%5D'%20passwd.PNG?token=AZMvAPqlzbEZeTYJ5qf06DIPIWt41rkRks5ckop_wA%3D%3D)
+        * 指令: `grep '[a-z]' passwd`
+        * 執行結果: 
+         ![github](https://raw.githubusercontent.com/ChiaYuSu/linux107b/master/Week%204%20-%20Screenshot/grep%20'%5Ba-z%5D'%20passwd.PNG?token=AZMvAJ6vIS1YaMQpwyVJoX8Zt5rRdVNJks5ckormwA%3D%3D)
+        * 指令: `grep '[a-zA-Z]' passwd`
+        * 執行結果: 
+         ![github](https://raw.githubusercontent.com/ChiaYuSu/linux107b/master/Week%204%20-%20Screenshot/grep%20'%5Ba-zA-Z%5D'%20passwd.PNG?token=AZMvALdIkVviBTziGxWHYGtt_zlnDAW1ks5ckor1wA%3D%3D)
+        * 指令: `grep '[,:_/]' passwd`
+        * 執行結果: 
+         ![github](https://raw.githubusercontent.com/ChiaYuSu/linux107b/master/Week%204%20-%20Screenshot/grep%20'%5B%E7%AC%A6%E8%99%9F%5D'%20passwd.PNG?token=AZMvANAJNVouc3la-4e0NuBKd9GlXypuks5ckosEwA%3D%3D)
+        * 指令: `grep '[^0-9]' passwd`
+        * 執行結果: 
+         ![github](https://raw.githubusercontent.com/ChiaYuSu/linux107b/master/Week%204%20-%20Screenshot/grep%20'%5B%5E0-9%5D'%20passwd.PNG?token=AZMvAKHs9gZ74XHmIXuA_L507zQhrPFYks5ckoscwA%3D%3D)
         > 注意: 反向字符 `^` 一定要在中括號 `[]` 內
     * 任意字符: 任何一個字符 `'.'`
         * 指令: `grep '.' passwd`
