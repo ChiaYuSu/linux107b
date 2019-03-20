@@ -3,14 +3,14 @@
 * 面對一堆文本需要分析
 * 面對一堆數據需要處理
 * 面對冗長的伺服器日誌找錯誤
-    + ex：`sed -n '/Error/p' fresh.log | awk '{print $1}'`
+    + ex: `sed -n '/Error/p' fresh.log | awk '{print $1}'`
 ## 通配符與正則表達式的差異
-* 通配符：用來匹配符合條件的文件名
-* 正則表達式：用來匹配符合條件的檔案內容
+* 通配符: 用來匹配符合條件的文件名
+* 正則表達式: 用來匹配符合條件的檔案內容
 ## Linux 三劍客
 * sed (stream editor)：行編輯器
-* awk：文本處理工具
-* grep (global search regular expression(RE) and print out the line)：查找
+* awk: 文本處理工具
+* grep (global search regular expression(RE) and print out the line): 查找
 ## 從基礎至應用（三個學習階段）
 1. 正則表達式（sed 及 awk 學習的基礎）
 2. sed 基本處理命令
@@ -21,6 +21,10 @@
 * 匹配兩位數、密碼、qq號、身分證字號等
 ## 正則表達式學習方法
 1. 單個字符表示
+    * 特定字符：某個具體的字符
+        * ex: `1`、`a`
+    * 範圍內字符
+    * 任意字符
 2. 字符串表示
 3. 表達式
 
