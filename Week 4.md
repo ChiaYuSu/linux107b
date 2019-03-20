@@ -44,6 +44,8 @@
         > 注意: 反向字符 `^` 一定要在中括號 `[]` 內
     * 任意字符: 任何一個字符 `'.'`
         * 指令: `grep '.' passwd`
+        * 執行結果:
+         ![github](https://raw.githubusercontent.com/ChiaYuSu/linux107b/master/Week%204%20-%20Screenshot/grep%20'.'%20passwd.PNG?token=AZMvAAAapG4ixDKwqiP96tQfA92H6CsRks5ckouwwA%3D%3D)
         > 注意: `'[.]'` 和 `\.` 的區別
 2. 字符串表示
 3. 表達式
