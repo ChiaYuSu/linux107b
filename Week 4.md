@@ -11,4 +11,4 @@
 * sed (stream editor)：行編輯器
 * awk：文件處理工具
 * grep (global search regular expression(RE) and print out the line)：查找
-    > 三者中最大的特點：一行指令，輕鬆搞定
+> 三者中最大的特點：一行指令，輕鬆搞定
