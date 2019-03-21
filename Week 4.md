@@ -49,7 +49,9 @@
         * 重複特定次數 `{m,n}` (`m` 代表重複次數最小值，`n` 代表重複次數最大值)
 3. 表達式
 ## Docker 安裝
-
+1. CentOS 7 有內建 Docker 套件，以 yum 指令透過網路安裝最新套件 `yum -y install docker`
+2. 啟動 docker 服務 `systemctl start docker`
+3. 設定每次開機後自動啟動 `systemctl enable docker`
 
 
 
