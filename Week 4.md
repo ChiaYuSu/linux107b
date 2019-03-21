@@ -61,6 +61,13 @@
 4. 下載 CentOS 7 的 Image `docker pull centos:7`
 5. 輸入 `docker images`，檢查是否成功下載
 
+## Docker 刪除 Images 及刪除 Container
+1. 刪除 Images
+    * 強制刪除所有 Images：`docker rmi -f $(docker images -a -q)`
+2. 刪除 Container
+    * 一個一個 Container 刪除：`docker rm Container_ID`
+    * 強制刪除所有 Container：`docker rm -f $(docker ps -a -q)`
+
 ## 延伸學習
 1. [慕课网 / 实例妙解Sed和Awk的秘密](https://www.imooc.com/learn/819)
 2. [鳥哥的 Linux 的私房菜 / 第十一章、正規表示法與文件格式化處理](http://linux.vbird.org/linux_basic/0330regularex.php)
