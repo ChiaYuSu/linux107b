@@ -61,6 +61,11 @@
 4. 下載 CentOS 7 的 Image `docker pull centos:7`
 5. 輸入 `docker images`，檢查是否成功下載
 
+## 啟動、離開及終止 docker
+1. 啟動 docker：`docker run -it centos:7 /bin/bash` 
+2. 離開 docker：按住鍵盤上 Control 鍵 + P + Q
+3. 終止 docker：`exit`
+
 ## Docker 刪除 Images 及刪除 Container
 1. 刪除 Images
     * 一個一個 Container 刪除：`docker rmi Image_Repository_tag`
