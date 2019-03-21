@@ -31,3 +31,9 @@
 * `grep`
 
 ## 正則表達式
+
+## 延伸學習
+
+<hr>
+
+<a href="https://github.com/ChiaYuSu/linux107b/blob/master/Week%202.md"><p style="text-align:right">■ 第二章</p></a>
