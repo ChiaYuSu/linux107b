@@ -23,12 +23,11 @@
 指令格式: `grep 'match_pattern' file_name`
 1. 單個字符表示
     * 特定字符: 某個具體的字符 `1`、`a`
-        * 指令: `grep '1' passwd`
 
-            | 指令 | 輸出結果 |
-            | ---- | ---- |
-            | `grep '1' passwd` |  |
-            | `grep 'a' passwd` |  |
+        | 指令 | 輸出結果 |
+        | ---- | ---- |
+        | `grep '1' passwd` |  |
+        | `grep 'a' passwd` |  |
     * 範圍字符: 數字字符 `[0-9]`、小寫字符 `[a-z]`、大寫字符 `[A-Z]`、符號字符 `[,:_/]`、反向字符 `[^]`
         * 指令: `grep '[0-9]' passwd` 
         * 指令: `grep '[a-z]' passwd` 
