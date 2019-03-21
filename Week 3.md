@@ -8,9 +8,9 @@
 | * | 0或多個字符 | `a*b` | `aabcb`、`axyzb`、`ab`|
 | ? | 任意一個字符 | `a?b` | `abb`、`acb`、`a0b` |
 | [list] | list 中任意單一字符 | `a[xyz]b` | `axb`、`ayb`、`azb` |
-| [!list] | 除 list 中的任意單一字符 | `a[!0-9]` | `axb`、`ayb`、`azb` |
+| [!list]<br>[^list] | 除 list 中的任意單一字符 | `a[!0-9]` | `axb`、`ayb`、`azb` |
 | [c1-c2] | c1-c2 中的任意單一字符 | `a[0-9]b` | `a0b`、`a1b`、`a2b` |
-| [!c1-c2] | 不在 c1-c2 中的任意字符 | `a[!0-9]b` | `acb`、`adb` |
+| [!c1-c2]<br>[^c1-c2] | 不在 c1-c2 中的任意字符 | `a[!0-9]b` | `acb`、`adb` |
 | {string1,string2,...} | string1 或 string2 其一字符串 | `a{abc,xyz,123}b` | `aabcb`、`axyzb`、`a123b` |
 
 
