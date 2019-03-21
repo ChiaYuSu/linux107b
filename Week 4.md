@@ -4,21 +4,26 @@
 * 面對一堆數據需要處理
 * 面對冗長的伺服器日誌找錯誤
     + 例：`sed -n '/Error/p' fresh.log | awk '{print $1}'`
+
 ## 通配符與正則表達式
 * 通配符：用來匹配符合條件的文件名
 * 正則表達式：用來匹配符合條件的檔案內容
+
 ## Linux 三劍客
 * sed (stream editor)：行編輯器
 * awk：文本處理工具
 * grep (global search regular expression(RE) and print out the line)：查找
+
 ## 從基礎至應用 (三個學習階段)
 1. 正則表達式 (sed 及 awk 學習的基礎)
 2. sed 基本處理命令
 3. awk 更為複雜的文本處裡
+
 ## 正則表達式應用的場景
 * 查找所有包含 `linux` 的行
 * 取出以 `abc` 開頭的所有單詞
 * 匹配兩位數、密碼、qq號、身分證字號等
+
 ## 正則表達式
 指令格式：`grep 'match_pattern' file_name`
 1. 單個字符表示
@@ -48,14 +53,13 @@
     * 字符組合 (重複特定次數)：
         * 重複特定次數 `{m,n}` (`m` 代表重複次數最小值，`n` 代表重複次數最大值)
 3. 表達式
+
 ## Docker 安裝
 1. CentOS 7 有內建 Docker 套件，以 yum 指令透過網路安裝最新套件 `yum -y install docker`
 2. 啟動 docker 服務 `systemctl start docker`
 3. 設定每次開機後自動啟動 `systemctl enable docker`
-
-
-
-
+4. 下載 CentOS 7 的 Image `docker pull centos:7`
+5. 輸入 `docker images`，檢查是否成功下載
 
 ## 延伸學習
 1. [慕课网 / 实例妙解Sed和Awk的秘密](https://www.imooc.com/learn/819)
