@@ -43,7 +43,7 @@
         * 指令: `grep '\w' passwd`
         * 指令: `grep '\W' passwd`
         * 指令: `grep '\bx\b' passwd` 
-            * 註: 搜尋
+            * 註: 僅搜尋代表密碼的 `x`，不包含非密碼的 `x`
 2. 字符串表示
 3. 表達式
 
