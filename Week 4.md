@@ -63,6 +63,7 @@
 
 ## Docker 刪除 Images 及刪除 Container
 1. 刪除 Images
+    * 一個一個 Container 刪除：`docker rmi Image_Repository_tag`
     * 強制刪除所有 Images：`docker rmi -f $(docker images -a -q)`
 2. 刪除 Container
     * 一個一個 Container 刪除：`docker rm Container_ID`
