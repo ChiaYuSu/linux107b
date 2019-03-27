@@ -15,7 +15,10 @@
 * 正則表達式總結
     * 正則很無情
     * 正則很大度
-    * 跳脫字元使用 `grep` 
+    * 跳脫字元使用 `egrep` 
+
+* `sort`：排序
+* `uniq -c`：
 
 ## 延伸學習
 1. [慕课网 / 实例妙解Sed和Awk的秘密](https://www.imooc.com/learn/819)
