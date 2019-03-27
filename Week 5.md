@@ -4,3 +4,10 @@
     * `cat -n -A a.txt`
 
 * 通配符 vs. 正則表達式
+
+* `-E` vs. `\+` vs. `egrep`
+    * `grep "se\+"`
+    * `grep -E "se+"`
+    * `egrep "se+"`
+
+* `-o`
