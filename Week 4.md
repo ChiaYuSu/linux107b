@@ -64,7 +64,8 @@
 
 ## 啟動、離開及終止 docker
 1. 啟動 docker：`docker run -it centos:7 /bin/bash` 
-2. 離開 docker：按住鍵盤上 Control 鍵 + P + Q
+2. 離開 docker：按住鍵盤上 Control 鍵 + P + Q (狀態：未關閉 docker)
+    * 若要回到未關閉的 docker：`docker attach Container_ID`
 3. 終止 docker：`exit`
 
 ## Docker 刪除 Images 及刪除 Container
