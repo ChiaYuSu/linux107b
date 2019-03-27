@@ -24,6 +24,10 @@
 * `docker run --rm centos:7`：`--rm` 代表 docker 執行完自動消滅
 * `docker run -d -p 8080:80 httpd`：`-d` 代表在背景執行，`-p` 代表將 本地的 8080 埠映射到 docker 的 80 埠
 * `docker inspect centos:7`：查看容器的資訊
+* `docker -e`：把系統環境變量傳進去給 docker
+
+## 本地端
+* `docker run -d -p 8080:80 -v /mydata:/usr/local/apache2/htdocs httpd`
 
 
 ## 延伸學習
