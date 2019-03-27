@@ -73,7 +73,7 @@
     * 一個一個 Container 刪除：`docker rmi Image_Repository_tag`
     * 強制刪除所有 Images：`docker rmi -f $(docker images -a -q)`
 2. 刪除 Container
-    * 一個一個 Container 刪除：`docker rm Container_ID`
+    * 一個一個 Container 刪除：`docker rm -f Container_ID`
     * 強制刪除所有 Container：`docker rm -f $(docker ps -a -q)`
 
 ## 將 docker 重新命名並 push 至 Docker 官網
