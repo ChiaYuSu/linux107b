@@ -74,7 +74,7 @@
     * 強制刪除所有 Images：`docker rmi -f $(docker images -a -q)`
 2. 刪除 Container
     * 一個一個 Container 刪除：`docker rm Container_ID`
-    * 強制刪除所有 Container：`docker rm -f $(docker ps -a -q`
+    * 強制刪除所有 Container：`docker rm -f $(docker ps -a -q)`
 
 ## 將 docker 重新命名並 push 至 Docker 官網
 1. `docker tag server:tag new_name/new_server:new_tag`，前面的 `server:tag` 輸入要重命名的 server 名稱及版本 (tag)，後面的則輸入自訂資訊，舉例來說我輸入的是 `docker tag centos:7 jack879tw/test:0.1`
