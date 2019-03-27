@@ -19,6 +19,12 @@
 
 * `sort`：排序
 * `uniq -c`：
+* `cd -`：回到上一個所在的目錄
+* `cat !$`：顯示上一個指令最後一個參數
+* `docker run --rm centos:7`：`--rm` 代表 docker 執行完自動消滅
+* `docker run -d -p 8080:80 httpd`：`-d` 代表在背景執行，`-p` 代表將 本地的 8080 埠映射到 docker 的 80 埠
+* `docker inspect centos:7`：查看容器的資訊
+
 
 ## 延伸學習
 1. [慕课网 / 实例妙解Sed和Awk的秘密](https://www.imooc.com/learn/819)
