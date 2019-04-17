@@ -51,8 +51,6 @@
 | 擴展性 | 差，所有 traffic 都要經過 Load Balancer | 好，但需要建立 IP Tunnel，適合用在跨境 Data Center 的環境 | 好，但要求 Load Balancer 跟 Real Server 在同一個 LAN 裡面 |
 | Server 安全性 | 好，Real Server 使用內部 IP，隱密 | 差，Real Server 使用 Public IP | 差，Real Server 使用 Public IP |
 | Public IP 需求 | 需要一個 IP 作為 Server VIP（Virtual IP）| 除了 VIP 之外，每個 Server 都需要有合法的 IP 可直接連接到客戶端 | 除了 VIP 之外，每個 Server 都需要有合法的 IP 可直接連接到客戶端 |
-| 
-
 
 ## 常見的排程演算法
 * RR（Round Robin）
