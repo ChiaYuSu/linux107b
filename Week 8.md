@@ -1,7 +1,7 @@
 # 第八週（期中考週）
 ## 準備三台虛擬伺服器
 * 目的：附載均衡（Load Balancer）
-* 相關硬體軟體：Haproxy、Nginx
+* 相關硬體軟體：Haproxy、Nginx、F5
 
 ## LVS（Linux Virtual Server）三種工作模式
 * NAT
@@ -55,7 +55,7 @@
 ## 常見的排程演算法
 * RR（Round Robin）
 * WRR（Weight Round Robin）
-* 最少連線數優先
+* Least Session（最少連線數優先）
 * SRC-IP Hash（雜湊函數）
 
 ## 報告
