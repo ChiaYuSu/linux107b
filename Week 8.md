@@ -28,3 +28,4 @@
 1. [麥斯奇科技 maxkit/三種 LVS 的模式：LVS-NAT、LVS-TUN、LVS-DR](http://blog.maxkit.com.tw/2016/05/lvs-lvs-natlvs-tunlvs-dr.html)
 2. [51CTO博客/Lvs之NAT、DR、TUN三种模式的应用配置案例](https://blog.51cto.com/lansgg/1229421)
 3. [The Will Will Web/使用 ApacheBench 進行網站的壓力測試](https://blog.miniasp.com/post/2008/06/30/Using-ApacheBench-ab-to-to-Web-stress-test)
+4. [碼人日誌/Siege – HTTP 網站壓力測試好幫手](https://coder.tw/?p=7198)
