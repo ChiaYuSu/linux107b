@@ -8,7 +8,8 @@
 * http://www.linuxvirtualserver.org/docs/ha/keepalived.html
 
 ## 不同平台下載指令
-* CentOS：`yum ins install`
+* CentOS：`yum install`
+* Ubuntu：`apt-get install`
 
 ## 五台虛擬機網卡設定
 * vm：NAT、internet、Host Only
