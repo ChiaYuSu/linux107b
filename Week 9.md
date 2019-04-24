@@ -6,7 +6,7 @@
 * `-n`：以數字形式輸出 IP 位址和連接埠
 
 ## Keepalived Solution 設定檔
-* http://www.linuxvirtualserver.org/docs/ha/keepalived.html
+* [linuxvirtualserver.org/The Keepalived Solution](http://www.linuxvirtualserver.org/docs/ha/keepalived.html)
 
 ## 不同平台下載指令
 * CentOS：`yum install`
