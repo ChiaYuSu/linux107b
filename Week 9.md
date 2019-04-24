@@ -15,8 +15,8 @@
 * LVS-1 (router-1、vm-1)：NAT、intnet、Host Only
 * LVS-2 (router-2、vm-2)：NAT、intnet、Host Only
 * Client：Host Only、intnet
-* CentOS 7.0-1：intnet
-* CentOS 7.0-2：intnet
+* CentOS 7.0-1 (web-1)：intnet
+* CentOS 7.0-2 (web-2)：intnet
 
 ## 延伸學習
 1. [Linux运维日志 centos.bz/LVS Keepalived双机高可用负载均衡搭建](https://www.centos.bz/2017/07/lvs-keepalived-ha-loadbalace/)
