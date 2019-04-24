@@ -1,8 +1,9 @@
 # 第九週筆記
-## 
-* `ipvsadm -C`：清除規則
-* `ipvsadm -Ln`：
-* `ipvsadm -Lnc`： 
+## `ipvsadm` 常用參數
+* `-C`：清除服務器表中的所有紀錄
+* `-l`：顯示虛擬服務器表
+* `-c`：顯示 LVS 目前的連接
+* `-n`：以數字形式輸出 IP 位址和連接埠
 
 ## Keepalived Solution 設定檔
 * http://www.linuxvirtualserver.org/docs/ha/keepalived.html
