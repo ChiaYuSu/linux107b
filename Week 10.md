@@ -12,8 +12,11 @@
 * 間接監控：可安裝套件在被控端（linux 平台上需安裝 nrpe 套件，若是在 windows 平台上則是安裝 nr c++ 套件），可以做較複雜的事情
 
 ## 兩台虛擬機網卡設定
-* LVS-1 (router-1、vm-1)：NAT、Host Only
-* LVS-2 (router-2、vm-2)：NAT、Host Only
+* Server：NAT、Host Only
+* Client：NAT、Host Only
+
+## Server 端需安裝的套件
+* 
 
 ## 延伸學習
 1. []()
