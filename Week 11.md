@@ -29,5 +29,9 @@ systemctl start nrpe
 * Ansible
     * 相關軟體還有 Saltstack、Puppet
 
+## 期末大作業
+* 伺服器的簡介（最晚第 16 週開始報告）
+
+
 ## 延伸學習
 1. [ITREAD/Nagios利用NSClient++監控Windows主機](https://www.itread01.com/content/1505803218.html)
