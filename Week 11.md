@@ -30,4 +30,4 @@ systemctl start nrpe
     * 相關軟體還有 Saltstack、Puppet
 
 ## 延伸學習
-1. [ITREAD/Nagios利用NSClient++監控Windows主機(https://www.itread01.com/content/1505803218.html)
+1. [ITREAD/Nagios利用NSClient++監控Windows主機](https://www.itread01.com/content/1505803218.html)
