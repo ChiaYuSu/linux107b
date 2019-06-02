@@ -37,7 +37,7 @@ user 	pts/0	:0           	00:33	1.00s  0.03s  0.00s w
     * filter 表：訪問控制、規則匹配
     * nat 表：地址轉發
 * 5 條鏈：`INPUT`、`OUTPUT`、`FORWARD`、`PREROUTING`、`POSTROUTING`
-* 數據包在 4 張表、5 條鏈匹配流程
+* 數據包在 4 張表、5 條鏈匹配流程<br>
     <img src="Week15/process.PNG" width="550px" /> 
 
 ## 作業
