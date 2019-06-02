@@ -26,9 +26,19 @@ user 	pts/0	:0           	00:33	1.00s  0.03s  0.00s w
 ## 什麼是 netfilter
 * 在提到 iptables 之前，我們必須先知道 netfilter 是什麼
 * netfilter 是 linux 操作系統核心層內部的一個數據包處理模塊
-* 數據包在 netfilter 中的掛載點，我們稱作 **hook point**，分別是 `PRE_ROUTING`、`INPUT`、`OUTPUT`、`FORWARD`、`POST_ROUTING` 這五個
+* 數據包在 netfilter 中的掛載點，我們稱作 **hook point**，分別是 `PREROUTING`、`INPUT`、`OUTPUT`、`FORWARD`、`POSTROUTING` 這五個
 * iptables 與 hook point 的關係<br>
     <img src="Week15/hook_point.PNG" width="550px" /> 
+
+## iptables 的 4 張表、5 條鏈
+* iptables 規則組成
+    * 4 張表 + 5條鏈 (hook point) + 規則
+* 4 張表：**filter 表**、**nat 表**、mangle 表、raw 表（後兩種表不常用到）
+    * filter 表：訪問控制、規則匹配
+    * nat 表：地址轉發
+* 5 條鏈：`INPUT`、`OUTPUT`、`FORWARD`、`PREROUTING`、`POSTROUTING`
+* 數據包在 4 張表、5 條鏈匹配流程
+    <img src="Week15/process.PNG" width="550px" /> 
 
 ## 作業
 * iptables 配置
