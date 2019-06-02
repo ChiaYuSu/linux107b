@@ -30,7 +30,6 @@ user 	pts/0	:0           	00:33	1.00s  0.03s  0.00s w
 * iptables 與 hook point 的關係<br>
 <img src="Week15\hook_point.PNG" width="550px" /> 
 
-
 ## 作業
 * iptables 配置
 1. **規則一：** 對所有的地址開放本機的 tcp (80、22、10-21) 端口的訪問
