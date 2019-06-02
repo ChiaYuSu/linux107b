@@ -49,4 +49,4 @@ user 	pts/0	:0           	00:33	1.00s  0.03s  0.00s w
 * [防火牆地址轉換 SNAT 及 DNAT](https://blog.csdn.net/chengxuyuanyonghu/article/details/64441374)
 
 ## 延伸學習
-1. [imooc / 用iptables搭建一套强大的安全防护盾](https://www.imooc.com/learn/389)
+1. [慕课网 imooc / 用iptables搭建一套强大的安全防护盾](https://www.imooc.com/learn/389)
