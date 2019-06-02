@@ -28,7 +28,7 @@ user 	pts/0	:0           	00:33	1.00s  0.03s  0.00s w
 * netfilter 是 linux 操作系統核心層內部的一個數據包處理模塊
 * 數據包在 netfilter 中的掛載點，我們稱作 **hook point**，分別是 `PRE_ROUTING`、`INPUT`、`OUTPUT`、`FORWARD`、`POST_ROUTING` 這五個
 * iptables 與 hook point 的關係<br>
-<img src="Week15\hook_point.PNG" width="370px" /> 
+<img src="Week15\hook_point.PNG" width="400px" /> 
 
 
 ## 作業
