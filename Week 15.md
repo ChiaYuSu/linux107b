@@ -27,7 +27,7 @@ user 	pts/0	:0           	00:33	1.00s  0.03s  0.00s w
 * 在提到 iptables 之前，我們必須先知道 netfilter 是什麼
 * netfilter 是 linux 操作系統核心層內部的一個數據包處理模塊
 * 數據包在 netfilter 中的掛載點，我們稱作 **hook point**，分別是 `PRE_ROUTING`、`INPUT`、`OUTPUT`、`FORWARD`、`POST_ROUTING` 這五個
-* ![]()
+
 
 ## 作業
 * iptables 配置
