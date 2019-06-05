@@ -25,17 +25,16 @@
 1. 首先需要安裝 epel-release：`yum install epel-release`
 2. 安裝 ansible：`yum install ansible -y`
 3. 在主控端配置 ansible.cfg 文件：`gedit /etc/ansible/hosts`（配置主機清單）
-```
-[app1]
-192.168.56.103
+> [app1]
+> 192.168.56.103
 
-[app2]
-192.168.56.106
+> [app2]
+> 192.168.56.106
 
-[myapp]
-192.168.56.103
-192.168.56.106
-```
+> [myapp]
+> 192.168.56.103
+> 192.168.56.106
+
 4. 查看遠端（被控端）指令：`ansible app1 -m command -a "ls /root"`
 
 ## ansible 的用法
