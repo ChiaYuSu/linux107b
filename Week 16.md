@@ -60,6 +60,59 @@
 
 ## ansible fetch 模塊應用
 
+## ansible file 模塊應用
+
+## ansible yum 模塊應用
+1. 在主控端輸入 `ansible app1 -m command -a "rpm "`
+
+## ansible service 模塊應用
+1. 
+
+## ansible user 模塊應用
+* 新增 / 刪除使用者
+1. 檢查被控端主機是否有此使用者（user1）：`ansible app1 -m command -a "getent passwd user1"`
+    * 若無會出現
+        ```
+        192.168.56.103 | FAILED | rc=2 >>
+        non-zero return code
+        ```
+2. 若無新增使用者（user1）：`ansible app1 -m user -a 'name=user1'`
+3. 接著檢查使用者（user1）是否成功在被控端被新增：`ansible app1 -m command -a "getent passwd user1"`
+    * 若有會出現
+        ```
+        192.168.56.103 | CHANGED | rc=0 >>
+        user1:x:1001:1001::/home/user1:/bin/bash
+        ```
+4. 若要刪除使用者（user1）輸入：`ansible app1 -m user -a 'name=user1 state=absent'`
+
+## ansible group 模塊應用
+1. 
+
+## ansible playbook 腳本
+1. 
+2. 
+    1. 在主控端寫腳本（test.yml）：`vim test.yml`
+        * 腳本內容如下：
+            ```
+            ---
+            - hosts: app1
+            remote_user: root
+            tasks:
+                - name: create new file
+                file: name=/tmp/newfile state=touch
+                - name: create new user
+                user: name=test1 system=yes shell=/sbin/nologin
+                - name: install package
+                yum: name=httpd
+                - name: copy html
+                copy: src=a.html dest=/var/www/html
+                - name: start service
+                service: name=httpd state=started
+            ```
+    2. 再寫 a.html 的配置檔：
+
+
 ## 延伸學習
 1. [51CTO博客 / ansible从入门到放弃](https://blog.51cto.com/11886307/2385720)
+2. [Github / 林柏億 istar0me](https://github.com/istar0me/linux-note/blob/107-2/W16%2020190605.md#ansible-playbooks)
 
