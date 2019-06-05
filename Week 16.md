@@ -41,12 +41,12 @@
 
 ## ansible 的用法
 * ansible 不是和大型管理環境，所有的管理都是透過 ssh 實現配置管理、應用部署、任務執行等功能
-* ansible 語法：`ansible <host-pattern> [-m -module_name] [-a args]`
-* 模塊選項及說明
+* ansible 語法：`ansible <host-pattern> [選項] [-a args]`
+* 選項及說明
 
     | 選項 | 說明 |
     | ---- | ---- |
-    | -m module | 指定模塊，默認是 command（上課有講到 command、shell、script、copy、fetch） |
+    | -m module | 指定模塊，默認是 command（另外上課有講到 command、shell、script、copy、fetch等模塊） |
     | --list-hosts | 顯示主機列表 |
 
 ## ansible copy 模塊應用
