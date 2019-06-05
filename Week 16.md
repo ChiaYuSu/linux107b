@@ -49,12 +49,16 @@
     | -m module | 指定模塊，默認是 command（另外上課有講到 command、shell、script、copy、fetch等模塊） |
     | --list-hosts | 顯示主機列表 |
 
+## ansible shell 模塊應用
+
+## ansible script 模塊應用
+
 ## ansible copy 模塊應用
 1. 在主控端 root 根目錄下建立新檔案 a.txt：`echo "hi" > a.txt`
 2. 把 a.txt 拷貝至被控端（192.168.56.103）並做備份（因為有可能檔名是一樣的）：`ansible app1 -m copy -a "src=/root/a.txt dest=/tmp/a.txt backup=yes"`
 3. 到被控端 tmp 目錄下檢查（192.168.56.103）是否有成功將檔案拷貝過去：`cd /tmp` -> `ls`
 
-
+## ansible fetch 模塊應用
 
 ## 延伸學習
 1. [51CTO博客 / ansible从入门到放弃](https://blog.51cto.com/11886307/2385720)
