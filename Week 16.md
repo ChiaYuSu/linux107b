@@ -193,4 +193,5 @@
 ## 延伸學習
 1. [51CTO博客 / ansible从入门到放弃](https://blog.51cto.com/11886307/2385720)
 2. [Github / 林柏億 istar0me](https://github.com/istar0me/linux-note/blob/107-2/W16%2020190605.md#ansible-playbooks)
+3. [Youtube / IT边看边学](https://www.youtube.com/watch?v=4lIi8d6m27c&list=PLOfJyn_hHwP_ATbd7GkDobQUiA2i7jLhN)
 
