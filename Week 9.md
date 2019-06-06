@@ -19,7 +19,7 @@
 * 效率較 Layer 7（應用層）來得高，Layer 7 較困難
 
 ## LVS NAT 基本性質
-
+![](Week9\LVS-NAT.gif)
 1. Cluster Nodes（Real Server）和 Load Balancer 在同一網段
 2. Real Server 的 RIP 地址一般為 Private IP
 3. Load Balancer 負責處理 Client 和 Real Server 之間的所有進出的封包
