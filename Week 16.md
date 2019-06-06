@@ -23,9 +23,9 @@
     Last login: Wed Jun  5 10:35:35 2019 192.168.56.102
     ```
 
-## ansible 安裝及應用
+## ansible 安裝及應用（僅需在主控端安裝即可）
 1. 首先需要安裝 epel-release：`yum install epel-release`
-2. 安裝 ansible：`yum install ansible -y`
+2. 接著繼續安裝 ansible：`yum install ansible -y`
 3. 在主控端配置 ansible.cfg 文件：`gedit /etc/ansible/hosts`（配置主機清單）
     ```
     [app1]
