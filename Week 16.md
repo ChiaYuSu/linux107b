@@ -155,7 +155,7 @@
 
 ## playbook 腳本
 1. 
-2. 
+2. continue...
     1. 在主控端寫腳本（test.yml）：`vim test.yml`
         * 腳本內容如下：
             ```
