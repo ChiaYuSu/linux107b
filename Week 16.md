@@ -65,7 +65,21 @@
 ## file 模塊應用
 
 ## yum 模塊應用
-1. 在主控端輸入 `ansible app1 -m command -a "rpm "`
+* 在遠端（被控端）**安裝 / 解除安裝**套件
+1. 在主控端輸入 `ansible app1 -m command -a "rpm -q vsftpd"` 檢查是否有安裝過指定套件（這裡筆者是以 ftp 套件當作範例）
+    * 若有安裝過會出現
+        ```
+        192.168.56.103 | CHANGED | rc=0 >>
+        vsftpd-3.0.2-25.el7.x86_64
+        ```
+    * 若沒有安裝過會出現
+        ```
+        192.168.56.103 | FAILED | rc=1 >>
+        package vsftpd is not installednon-zero return code
+        ```
+2. 若要安裝 ftp 套件輸入：`ansible app1 -m yum -a "name=vsftpd state=present"`（這裡的 present 可省略，因為預設狀態就是 present）
+
+3. 若要解除安裝 ftp 套件則可輸入：`ansible app1 -m yum -a "name=vsftpd state=absent"`
 
 ## service 模塊應用
 * **啟動 / 關閉 / 重新啟動 / 重新載入**遠端（被控端）**伺服器**
