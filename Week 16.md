@@ -77,7 +77,7 @@
         192.168.56.103 | FAILED | rc=1 >>
         package vsftpd is not installednon-zero return code
         ```
-2. 若要安裝 ftp 套件輸入：`ansible app1 -m yum -a "name=vsftpd state=present"`（這裡的 present 可省略，因為預設狀態就是 present）
+2. 若要安裝 ftp 套件輸入：`ansible app1 -m yum -a "name=vsftpd state=present"`（這裡的 `state=present` 可省略，因為預設狀態就是 present）
 
 3. 若要解除安裝 ftp 套件則可輸入：`ansible app1 -m yum -a "name=vsftpd state=absent"`
 
