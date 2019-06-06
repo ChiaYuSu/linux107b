@@ -9,14 +9,14 @@
 * RIP：Real IP
 * RS：Real Server
 
+## LVS（Linux Virtual Server）
+* 是基於 Layer 4 （連線層）的附載均衡，不支持複雜特性的附載均衡，Layer 4 較簡單（可以看到排程）
+* 效率較 Layer 7（應用層）來得高，Layer 7 較困難
+
 ## LVS（Linux Virtual Server）三種工作模式
 * NAT
 * IP Tunneling
 * DR（Direct Routing）
-
-## LVS（Linux Virtual Server）
-* 是基於 Layer 4 （連線層）的附載均衡，不支持複雜特性的附載均衡，Layer 4 較簡單（可以看到排程）
-* 效率較 Layer 7（應用層）來得高，Layer 7 較困難
 
 ## LVS NAT 基本性質
 <img src="Week9\LVS-NAT.gif" width="550px" /> <br>
