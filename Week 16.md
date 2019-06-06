@@ -226,7 +226,7 @@
         192.168.56.103 | CHANGED | rc=0 >>
         aaa:x:1002:
         ```
-4. 若要刪除使用者（user1）輸入：`ansible app1 -m group -a 'name=aaa state=absent'` 
+4. 若要刪除群組（aaa）輸入：`ansible app1 -m group -a 'name=aaa state=absent'` 
 
 ## playbook 腳本
 1. 
