@@ -23,7 +23,7 @@
     * **隱藏客戶端真實 IP**：用戶可以透過代理伺服器隱藏自己的 IP 位址
 * 相關套件：Squid
 
-    
+![](Week1\forward_proxy.jpg)
 
 ### 反向代理（reverse proxy）伺服器
 * 定義：
