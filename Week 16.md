@@ -22,7 +22,7 @@
     ```
     Last login: Wed Jun  5 10:35:35 2019 192.168.56.102
     ```
-    
+
 ## ansible 安裝及應用
 1. 首先需要安裝 epel-release：`yum install epel-release`
 2. 安裝 ansible：`yum install ansible -y`
@@ -48,29 +48,29 @@
 
     | 選項 | 說明 |
     | ---- | ---- |
-    | -m module | 指定模塊，默認是 command（另外上課有講到 command、shell、script、copy、fetch等模塊） |
+    | -m module | 指定模塊，默認是 command（另外上課有講到 command、shell、script、copy、fetch、file、yum、service、user、group等模塊） |
     | --list-hosts | 顯示主機列表 |
 
-## ansible shell 模塊應用
+## shell 模塊應用
 
-## ansible script 模塊應用
+## script 模塊應用
 
-## ansible copy 模塊應用
+## copy 模塊應用
 1. 在主控端 root 根目錄下建立新檔案 a.txt：`echo "hi" > a.txt`
 2. 把 a.txt 拷貝至被控端（192.168.56.103）並做備份（因為有可能檔名是一樣的）：`ansible app1 -m copy -a "src=/root/a.txt dest=/tmp/a.txt backup=yes"`
 3. 到被控端 tmp 目錄下檢查（192.168.56.103）是否有成功將檔案拷貝過去：`cd /tmp` -> `ls`
 
-## ansible fetch 模塊應用
+## fetch 模塊應用
 
-## ansible file 模塊應用
+## file 模塊應用
 
-## ansible yum 模塊應用
+## yum 模塊應用
 1. 在主控端輸入 `ansible app1 -m command -a "rpm "`
 
-## ansible service 模塊應用
+## service 模塊應用
 1. 
 
-## ansible user 模塊應用
+## user 模塊應用
 * 新增 / 刪除使用者
 1. 檢查被控端主機是否有此使用者（user1）：`ansible app1 -m command -a "getent passwd user1"`
     * 若無會出現
@@ -87,10 +87,10 @@
         ```
 4. 若要刪除使用者（user1）輸入：`ansible app1 -m user -a 'name=user1 state=absent'`
 
-## ansible group 模塊應用
+## group 模塊應用
 1. 
 
-## ansible playbook 腳本
+## playbook 腳本
 1. 
 2. 
     1. 在主控端寫腳本（test.yml）：`vim test.yml`
