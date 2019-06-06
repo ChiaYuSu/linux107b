@@ -26,7 +26,9 @@
     <img src="Week1/forward_proxy.JPG" width="550px" /> 
 
 ### 反向代理（reverse proxy）伺服器
-* 
+* 定義：
+* 作用：
+* 相關套件：
 
 
 
