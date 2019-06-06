@@ -212,7 +212,21 @@
 4. 若要刪除使用者（user1）輸入：`ansible app1 -m user -a 'name=user1 state=absent'`
 
 ## group 模組應用
-1. 
+* **新增 / 刪除**遠端（被控端）**使用者群組**
+1. 檢查被控端主機是否有此群組（aaa）：`ansible app1 -m command -a "getent group aaa"`
+    * 若無會出現
+        ```
+        192.168.56.103 | FAILED | rc=2 >>
+        non-zero return code
+        ```
+2. 若無新增群組（aaa）：`ansible app1 -m group -a 'name=aaa'`
+3. 接著檢查群組（aaa）是否成功在被控端被新增：`ansible app1 -m command -a "getent group aaa"`
+    * 若有會出現
+        ```
+        192.168.56.103 | CHANGED | rc=0 >>
+        aaa:x:1002:
+        ```
+4. 若要刪除使用者（user1）輸入：`ansible app1 -m group -a 'name=aaa state=absent'` 
 
 ## playbook 腳本
 1. 
