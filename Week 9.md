@@ -21,7 +21,7 @@
 ## LVS NAT 基本性質
 <img src="Week9\LVS-NAT.gif" width="550px" /> <br>
 1. Cluster Nodes（Real Server）和 Load Balancer 在同一網段
-2. Real Server 的 RIP 地址一般為 Private IP
+2. Real Server 的 RIP 一般為 Private IP
 3. Load Balancer 負責處理 Client 和 Real Server 之間的所有進出的封包
 4. Real Server 將 Load Balancer 的內網 IP 作為 Default Gateway
 5. 只需要在 Load Balancer 上配置一個 Public IP 就可以了
@@ -39,11 +39,11 @@
 7. Real Server 主機需要綁定 VIP 地址在 LO 接口上（各個服務器有相同的 VIP 和單獨的 RIP）
 
 ## LVS DR 基本性質
-1. Load Balancer 與 Real Server 必須在同一個物理網路中；
+1. Load Balancer 與 Real Server 必須在同一個物理網路中
 2. Real Server 的 RIP 地址不必是私有地址，如可為 Public IP 可以實現遠端管理
 3. Load Balancer 只負責處理 Request，Response 由 Real Server 直接發往 Client
 4. Real Server 不能將 Gateway 指向 Load Balancer，而是直接配置為上層路由的 Gateway
-5. Load Balancer 不支援 port mapping
+5. Load Balancer 不支援 Port Mapping
 6. 大多數 OS 都可以用在 Real Server
 7. Real Server 主機需要綁定 VIP 地址在 LO 接口上（有相同的 VIP 和單獨的 RIP），並且需要設定 ARP 抑制（由於網絡接口都會進行ARP廣播回應，但 Cluster 的其他機器都有這個 VIP 的 LO 接口，都回應就會衝突。所以我們需要把 Real Server 的 LO 接口的 ARP 回應關閉掉）
 
