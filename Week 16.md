@@ -61,7 +61,7 @@
 ## shell 模組應用
 * 相對於 `command` 指令，較進階的指令建議使用 `shell` 指令
 * creates 參數：當檔案存在時**不執行**後面的指令，可以輸入 `ansible app1 -m shell -a "creates=/tmp/test ls /tmp"`
-    * 若檔案不存在則執行 `ls /tmp`，結果如下
+    * 若檔案不存在執行 `ls /tmp`，結果如下
         ```
         192.168.56.103 | CHANGED | rc=0 >>
         ansible_command_payload_iwqk5b
@@ -76,12 +76,12 @@
         skipped, since /tmp/test exists
         ```
 * removes 參數：當檔案存在時**執行**後面的指令，可以輸入 `ansible app1 -m shell -a "removes=/tmp/test ls /tmp"`
-    * 若檔案不存在則執行 `ls /tmp`，結果如下
+    * 若檔案不存在跳過後面指令，結果如下
         ```
         192.168.56.103 | SUCCESS | rc=0 >>
         skipped, since /tmp/test does not exist
         ```
-    * 若檔案存在則跳過後面指令，結果如下
+    * 若檔案存在則執行後面指令 `ls /tmp`，結果如下
         ```
         192.168.56.103 | CHANGED | rc=0 >>
         ansible_command_payload_iwqk5b
