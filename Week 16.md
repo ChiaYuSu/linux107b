@@ -101,9 +101,24 @@
         echo "hello world"
         hostname
         ```
-2. 
-
-
+2. 再次檢查主控端是否有寫入，可輸入 `cat ./a.sh`
+3. 接著輸入 `ansible app1 -m script -a a.sh` 測試執行，查看被控端是否回傳 `a.sh` 腳本內容
+    * 執行結果如下
+        ```
+        192.168.56.103 | CHANGED => {
+            "changed": true,
+            "rc": 0,
+            "stderr": "Shared connection to 192.168.56.103 closed.\r\n",
+            "stderr_lines": [
+                "Shared connection to 192.168.56.103 closed."
+            ],
+            "stdout": "hi\r\nlocalhost.localdomain\r\n",
+            "stdout_lines": [
+                "hi",
+                "localhost.localdomain"
+            ]
+        }
+        ```
 
 ## copy 模組應用
 * 將主控端檔案**複製**至被控端
