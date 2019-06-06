@@ -94,7 +94,7 @@
         ```
 
 ## script 模組應用
-### 在主控端**寫一個腳本**並在被控端運行
+### 在主控端寫一個腳本並在被控端運行
 1. 先在主控端寫一個腳本，並將腳本寫入 `a.sh`，指令為 `vim a.sh`
     * 腳本如下
         ```
@@ -123,13 +123,13 @@
         ```
 
 ## copy 模組應用
-### 將主控端檔案**複製**至被控端
+### 將主控端檔案複製至被控端
 1. 在主控端 root 根目錄下建立新檔案 a.txt：`echo "hi" > a.txt`
 2. 把 a.txt 拷貝至被控端並做備份（因為有可能檔名是一樣的）：`ansible app1 -m copy -a "src=/root/a.txt dest=/tmp/a.txt backup=yes"`
 3. 接著可利用 `command` 模組輸入 `ansible app1 -m command -a "ls /tmp"` 到被控端 tmp 目錄下檢查是否有成功將檔案拷貝過去
 
 ## fetch 模組應用
-### 將被控端檔案**擷取**至主控端，一般經常將被控段的 `log` 記錄檔擷取至主控端
+### 將被控端檔案擷取至主控端，一般經常將被控段的 `log` 記錄檔擷取至主控端
 1. 假設我想查台看兩被控端所有的使用者資訊，我可以輸入 `ansible myapp -m fetch -a "src=/etc/passwd dest=/tmp"`，這個指令代表會從被控端擷取 `/etc/passwd` 使用者資料到主控端 `/tmp` 目錄下
     * 若成功會出現
         ```
@@ -166,7 +166,7 @@
 ## file 模組應用
 
 ## yum 模組應用
-### 在遠端（被控端）**安裝 / 解除安裝**套件
+### 在遠端（被控端）安裝 / 解除安裝套件
 1. 在主控端輸入 `ansible app1 -m command -a "rpm -q vsftpd"` 檢查是否有安裝過指定套件（這裡筆者是以 ftp 套件當作範例）
     * 若有安裝過會出現
         ```
@@ -183,7 +183,7 @@
 3. 若要解除安裝 ftp 套件則可輸入：`ansible app1 -m yum -a "name=vsftpd state=absent"`
 
 ## service 模組應用
-### **啟動 / 關閉 / 重新啟動 / 重新載入**遠端（被控端）**伺服器**
+### 啟動 / 關閉 / 重新啟動 / 重新載入遠端（被控端）伺服器
 1. 檢查被控端主機是否有開啟 ssh 伺服器：`ansible app1 -m command -a "netstat -tunlp | grep 22"`
     * 若有開啟會出現
         ```
@@ -197,7 +197,7 @@
 3. 再次檢查被控端主機是否關閉 ssh 伺服器：`ansible app1 -m command -a "netstat -tunlp | grep 22"`
 
 ## user 模組應用
-### **新增 / 刪除**遠端（被控端）**使用者**
+### 新增 / 刪除遠端（被控端）使用者
 1. 檢查被控端主機是否有此使用者（user1）：`ansible app1 -m command -a "getent passwd user1"`
     * 若無會出現
         ```
