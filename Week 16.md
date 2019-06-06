@@ -78,17 +78,17 @@
 * removes 參數：當檔案存在時**執行**後面的指令，可以輸入 `ansible app1 -m shell -a "removes=/tmp/test ls /tmp"`
     * 若檔案不存在則執行 `ls /tmp`，結果如下
         ```
+        192.168.56.103 | SUCCESS | rc=0 >>
+        skipped, since /tmp/test does not exist
+        ```
+    * 若檔案存在則跳過後面指令，結果如下
+        ```
         192.168.56.103 | CHANGED | rc=0 >>
         ansible_command_payload_iwqk5b
         ssh-F39oTT9cpIGU
         systemd-private-a3098911bc6f4adf840e4651af89abb1-bolt.service-XayddU
         systemd-private-a3098911bc6f4adf840e4651af89abb1-chronyd.service-nczl9E
         ...
-        ```
-    * 若檔案存在則跳過後面指令，結果如下
-        ```
-        192.168.56.103 | SUCCESS | rc=0 >>
-        skipped, since /tmp/test does not exist
         ```
 
 ## script 模組應用
