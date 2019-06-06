@@ -10,7 +10,7 @@
 * 被控端 1（Server 1）：NAT + Host Only
     * 筆者 ip：192.168.56.103
 * 被控端 2（Server 2）：NAT + Host Only
-    * 筆者 ip：192.168.56.106
+    * 筆者 ip：192.168.56.107
 
 ## 前置作業
 1. 三台機器都安裝 ssh：`yum install ssh`
@@ -18,8 +18,8 @@
 3. 檢查 ssh 是否被開啟：`netstat -tunlp | grep 22`
 4. 生成 ssh 公開金鑰：`ssh-keygen`
 5. 切換目錄：`cd /root/.ssh`
-6. 把主控端公開金鑰複製到遠端（被控端）主機：`scp id_rsa.pub user@192.168.56.103:/tmp/authorized_keys`、`scp id_rsa.pub user@192.168.56.106:/tmp/authorized_keys`
-7. 確認被控端主機是否有連上：`ssh 192.168.56.103`、`ssh 192.168.56.106`
+6. 把主控端公開金鑰複製到遠端（被控端）主機：`scp id_rsa.pub user@192.168.56.103:/tmp/authorized_keys`、`scp id_rsa.pub user@192.168.56.107:/tmp/authorized_keys`
+7. 確認被控端主機是否有連上：`ssh 192.168.56.103`、`ssh 192.168.56.107`
     ```
     Last login: Wed Jun  5 10:35:35 2019 192.168.56.102
     ```
@@ -33,11 +33,11 @@
     192.168.56.103
 
     [app2]
-    192.168.56.106
+    192.168.56.107
 
     [myapp]
     192.168.56.103
-    192.168.56.106
+    192.168.56.107
     ```
 
 4. 查看遠端（被控端）指令：`ansible app1 -m command -a "ls /root"`
@@ -123,10 +123,43 @@
 ## copy 模組應用
 * 將主控端檔案**複製**至被控端
 1. 在主控端 root 根目錄下建立新檔案 a.txt：`echo "hi" > a.txt`
-2. 把 a.txt 拷貝至被控端（192.168.56.103）並做備份（因為有可能檔名是一樣的）：`ansible app1 -m copy -a "src=/root/a.txt dest=/tmp/a.txt backup=yes"`
-3. 接著可利用 `command` 模組輸入 `ansible app1 -m command -a "ls /tmp"` 到被控端 tmp 目錄下檢查（192.168.56.103）是否有成功將檔案拷貝過去
+2. 把 a.txt 拷貝至被控端並做備份（因為有可能檔名是一樣的）：`ansible app1 -m copy -a "src=/root/a.txt dest=/tmp/a.txt backup=yes"`
+3. 接著可利用 `command` 模組輸入 `ansible app1 -m command -a "ls /tmp"` 到被控端 tmp 目錄下檢查是否有成功將檔案拷貝過去
 
 ## fetch 模組應用
+* 將被控端檔案**擷取**至主控端，一般經常將被控段的 `log` 記錄檔擷取至主控端
+1. 假設我想查台看兩被控端所有的使用者資訊，我可以輸入 `ansible myapp -m fetch -a "src=/etc/passwd dest=/tmp"`，這個指令代表會從被控端擷取 `/etc/passwd` 使用者資料到主控端 `/tmp` 目錄下
+    * 若成功會出現
+        ```
+        192.168.56.103 | SUCCESS => {
+            "changed": false,
+            "checksum": "1ab8e7ca203423162e16fd322a753ce29625c07a",
+            "dest": "/tmp/192.168.56.103/etc/passwd",
+            "file": "/etc/passwd",
+            "md5sum": "ff738ecc1eb50551b84b3439e6271a16"
+        }
+        192.168.56.107 | SUCCESS => {
+            "changed": false,
+            "checksum": "5a3fa1b1e83d86b5e0b2fa967a87fda8e417981d",
+            "dest": "/tmp/192.168.56.107/etc/passwd",
+            "file": "/etc/passwd",
+            "md5sum": "d415648d6c66501e6cc6c396e0b9fc23"
+        }
+        ```
+2. 接著我們可以在主控端輸入 `cd /tmp` 切換目錄至 `tmp` 下，再輸入 `ls`，查詢是否有成功將被控端 `passwd` 檔案 fetch 回來。這裡要注意的是由於我們會管理大量的伺服器，然後不同的伺服器可能有相同的檔案，因此 ansible 在 fetch 回來的檔案會根據伺服器 ip 自動產生相對應的目錄（ip 位址就是目錄名稱）
+    * 執行結果
+        ```
+        192.168.56.103 
+        192.168.56.107
+        ssh-9WGR1yPmGi1L
+        systemd-private-db90827786894542ab67f22fefc9a383-bolt.service-MyDHo3
+        systemd-private-db90827786894542ab67f22fefc9a383-chronyd.service-MuOlt0
+        systemd-private-db90827786894542ab67f22fefc9a383-colord.service-kH0ifu
+        systemd-private-db90827786894542ab67f22fefc9a383-rtkit-daemon.service-AvcvNQ
+        Temp-51de5a8c-3c05-4f87-8f99-0ee9e14b856e
+        tmp.Oyo4zVkGzn
+        tracker-extract-files.1000
+        ```
 
 ## file 模組應用
 
