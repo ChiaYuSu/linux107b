@@ -5,11 +5,11 @@
 * ansible
 
 ## 環境配置
-* 主控端：NAT + Host Only
+* 主控端（Client）：NAT + Host Only
     * 筆者 ip：192.168.56.102
-* 被控端 1：NAT + Host Only
+* 被控端 1（Server 1）：NAT + Host Only
     * 筆者 ip：192.168.56.103
-* 被控端 2：NAT + Host Only
+* 被控端 2（Server 2）：NAT + Host Only
     * 筆者 ip：192.168.56.106
 
 ## 前置作業
@@ -92,6 +92,18 @@
         ```
 
 ## script 模組應用
+* 在主控端**寫一個腳本**並在被控端運行
+1. 先在主控端寫一個腳本，並將腳本寫入 `a.sh`，指令為 `vim a.sh`
+    * 腳本如下
+        ```
+        #!/usr/bin/bash
+
+        echo "hello world"
+        hostname
+        ```
+2. 
+
+
 
 ## copy 模組應用
 * 將主控端檔案**複製**至被控端
