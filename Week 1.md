@@ -34,7 +34,7 @@
     * **提供安全保障**：反向代理伺服器可以做為應用層防火牆，為網站提供對基於 Web 的攻擊行為（如：DDoS攻擊）的防護，更容易排茶惡意軟體。此外，還可以為後端伺服器統一提供加密和 SSL 加速，提供 HTTP 訪問認證
 * 相關套件：Nginx、Apache HTTP Server、LVS、HAProxy
     > 註：Nginx 並非專門的 Load Balancer，因為採用 Round Robin 機制，會輪流詢問各個主機（沒有優先權概念），導致效能較好的主機不能長時間佔用。因此一般還是建議採用 LVS、HAProxy
-<br>
+    <br>
 
     <img src="Week1\reverse_proxy.jpg" width="550px" /> 
 
