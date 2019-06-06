@@ -55,13 +55,32 @@
 * 預設的模組，執行指定的命令
     * 缺點：只能支援基本的指令，如出現萬用字元不支援，所以如果要採用較進階的指令，會建議使用 `shell 模組`
 * 檢查是否安裝 `vsftpd` 套件，可以輸入 `ansible app1 -m command -a "rpm -q vsftpd"`
-* 查看使用者（user）是否存在，可以輸入：`ansible app1 -m command -a "getent passwd user"`（以 X 隱藏密碼）；若需要查看加密後的密碼，可以輸入：`ansible app1 -m command -a "getent shadow user"`
+* 查看使用者（user）是否存在，可以輸入`ansible app1 -m command -a "getent passwd user"`（以 X 隱藏密碼）；若需要查看加密後的密碼，可以輸入`ansible app1 -m command -a "getent shadow user"`
 
 ## shell 模組應用
+* 相對於 `command` 指令，較進階的指令建議使用 `shell` 指令
+* 當檔案存在時不執行後面的指令，可以輸入 `ansible app1 -m shell -a "creates=/tmp/test ls /tmp"`
+    * 若檔案不存在則執行 `ls /tmp`，結果如下
+        ```
+        [root@localhost usr]# ansible app1 -m shell -a "creates=/tmp/test ls /tmp"
+        192.168.56.103 | CHANGED | rc=0 >>
+        ansible_command_payload_iwqk5b
+        ssh-F39oTT9cpIGU
+        systemd-private-a3098911bc6f4adf840e4651af89abb1-bolt.service-XayddU
+        systemd-private-a3098911bc6f4adf840e4651af89abb1-chronyd.service-nczl9E
+        ...
+        ```
+    * 若檔案存在則跳過後面指令，結果如下
+        ```
+        [root@localhost usr]# ansible app1 -m shell -a "creates=/tmp/test ls /tmp"
+        192.168.56.103 | SUCCESS | rc=0 >>
+        skipped, since /tmp/test exists
+        ```
 
 ## script 模組應用
 
 ## copy 模組應用
+* 將主控端檔案**複製**至被控端
 1. 在主控端 root 根目錄下建立新檔案 a.txt：`echo "hi" > a.txt`
 2. 把 a.txt 拷貝至被控端（192.168.56.103）並做備份（因為有可能檔名是一樣的）：`ansible app1 -m copy -a "src=/root/a.txt dest=/tmp/a.txt backup=yes"`
 3. 到被控端 tmp 目錄下檢查（192.168.56.103）是否有成功將檔案拷貝過去：`cd /tmp` -> `ls`
