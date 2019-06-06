@@ -214,7 +214,7 @@
 4. 若要刪除使用者（user1）輸入：`ansible app1 -m user -a 'name=user1 state=absent'`
 
 ## group 模組應用
-### **新增 / 刪除**遠端（被控端）**使用者群組**
+### 新增 / 刪除遠端（被控端）使用者群組
 1. 檢查被控端主機是否有此群組（aaa）：`ansible app1 -m command -a "getent group aaa"`
     * 若無會出現
         ```
