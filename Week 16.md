@@ -55,7 +55,7 @@
 * 預設的模組，執行指定的命令
     * 缺點：只能支援基本的指令，如出現萬用字元不支援，所以如果要採用較進階的指令，會建議使用 `shell 模組`
 * 檢查是否安裝 `vsftpd` 套件，可以輸入 `ansible app1 -m command -a "rpm -q vsftpd"`
-* 查看使用者（user）是否存在，可以輸入`ansible app1 -m command -a "getent passwd user"`（以 X 隱藏密碼）；若需要查看加密後的密碼，可以輸入`ansible app1 -m command -a "getent shadow user"`
+* 查看使用者（user）是否存在，可以輸入 `ansible app1 -m command -a "getent passwd user"`（以 X 隱藏密碼）；若需要查看加密後的密碼，可以輸入 `ansible app1 -m command -a "getent shadow user"`
 
 ## shell 模組應用
 * 相對於 `command` 指令，較進階的指令建議使用 `shell` 指令
