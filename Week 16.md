@@ -68,10 +68,21 @@
 1. 在主控端輸入 `ansible app1 -m command -a "rpm "`
 
 ## service 模塊應用
-1. 
+* **啟動 / 關閉 / 重新啟動 / 重新載入**遠端（被控端）**伺服器**
+1. 檢查被控端主機是否有開啟 ssh 伺服器：`ansible app1 -m command -a "netstat -tunlp | grep 22"`
+    * 若有開啟會出現
+        ```
+        192.168.56.103 | CHANGED | rc=0 >>
+        Active Internet connections (only servers)
+        Proto Recv-Q Send-Q Local Address       	Foreign Address     	State   	PID/Program name       	 
+        tcp    	0  	0 0.0.0.0:22          	0.0.0.0:*           	LISTEN  	4564/sshd
+        ```
+2. 若需要關閉 ssh 伺服器：`ansible app1 -m service -a "name=sshd state=stopped"`
+    * state 選項還有：`started`、`restarted`、`reloaded` 可供使用
+3. 再次檢查被控端主機是否關閉 ssh 伺服器：`ansible app1 -m command -a "netstat -tunlp | grep 22"`
 
 ## user 模塊應用
-* 新增 / 刪除使用者
+* **新增 / 刪除**遠端（被控端）**使用者**
 1. 檢查被控端主機是否有此使用者（user1）：`ansible app1 -m command -a "getent passwd user1"`
     * 若無會出現
         ```
