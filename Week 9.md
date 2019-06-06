@@ -30,6 +30,7 @@
 8. 因為 Load Balancer 負責所有資料的進出，所以在大型應用場景中，Load Balancer 容易成為系統瓶頸。此外，因為 NAT 的關係，Load Balancer 必須將 Reqeust 和 Response 進行 IP 改寫，因此網站訪問量比較大的時候 Load Balancer 會有比較大的瓶頸，一般要求最多只能 10-20 台節點
 
 ## LVS IP TUNNELING 基本性質
+<img src="Week9\LVS-TUN-IPTunneling.gif" width="550px" /> <br>
 1. Cluster Nodes 可跨越 Internet（處於不同的物理網路中）
 2. Real Server 的 Real IP 必須是 Public IP
 3. Load Balancer 只需要處理 Reqeust，Response 由 Real Server 直接發送給 Client
@@ -39,6 +40,7 @@
 7. Real Server 主機需要綁定 VIP 地址在 LO 接口上（各個服務器有相同的 VIP 和單獨的 RIP）
 
 ## LVS DR 基本性質
+<img src="Week9\LVS-DR-DRouting.gif" width="550px" /> <br>
 1. Load Balancer 與 Real Server 必須在同一個物理網路中
 2. Real Server 的 RIP 地址不必是私有地址，如可為 Public IP 可以實現遠端管理
 3. Load Balancer 只負責處理 Request，Response 由 Real Server 直接發往 Client
