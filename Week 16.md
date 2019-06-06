@@ -48,23 +48,25 @@
 
     | 選項 | 說明 |
     | ---- | ---- |
-    | -m module | 指定模塊，默認是 command（另外上課有講到 command、shell、script、copy、fetch、file、yum、service、user、group等模塊） |
+    | -m module | 指定模組，默認是 command（另外上課有講到 command、shell、script、copy、fetch、file、yum、service、user、group等模組） |
     | --list-hosts | 顯示主機列表 |
 
-## shell 模塊應用
+## command 模組
 
-## script 模塊應用
+## shell 模組應用
 
-## copy 模塊應用
+## script 模組應用
+
+## copy 模組應用
 1. 在主控端 root 根目錄下建立新檔案 a.txt：`echo "hi" > a.txt`
 2. 把 a.txt 拷貝至被控端（192.168.56.103）並做備份（因為有可能檔名是一樣的）：`ansible app1 -m copy -a "src=/root/a.txt dest=/tmp/a.txt backup=yes"`
 3. 到被控端 tmp 目錄下檢查（192.168.56.103）是否有成功將檔案拷貝過去：`cd /tmp` -> `ls`
 
-## fetch 模塊應用
+## fetch 模組應用
 
-## file 模塊應用
+## file 模組應用
 
-## yum 模塊應用
+## yum 模組應用
 * 在遠端（被控端）**安裝 / 解除安裝**套件
 1. 在主控端輸入 `ansible app1 -m command -a "rpm -q vsftpd"` 檢查是否有安裝過指定套件（這裡筆者是以 ftp 套件當作範例）
     * 若有安裝過會出現
@@ -81,7 +83,7 @@
 
 3. 若要解除安裝 ftp 套件則可輸入：`ansible app1 -m yum -a "name=vsftpd state=absent"`
 
-## service 模塊應用
+## service 模組應用
 * **啟動 / 關閉 / 重新啟動 / 重新載入**遠端（被控端）**伺服器**
 1. 檢查被控端主機是否有開啟 ssh 伺服器：`ansible app1 -m command -a "netstat -tunlp | grep 22"`
     * 若有開啟會出現
@@ -95,7 +97,7 @@
     * state 選項還有：`started`（啟動）、`restarted`（重新啟動）、`reloaded`（重新載入）可供使用
 3. 再次檢查被控端主機是否關閉 ssh 伺服器：`ansible app1 -m command -a "netstat -tunlp | grep 22"`
 
-## user 模塊應用
+## user 模組應用
 * **新增 / 刪除**遠端（被控端）**使用者**
 1. 檢查被控端主機是否有此使用者（user1）：`ansible app1 -m command -a "getent passwd user1"`
     * 若無會出現
@@ -112,7 +114,7 @@
         ```
 4. 若要刪除使用者（user1）輸入：`ansible app1 -m user -a 'name=user1 state=absent'`
 
-## group 模塊應用
+## group 模組應用
 1. 
 
 ## playbook 腳本
