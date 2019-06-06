@@ -78,7 +78,7 @@
         tcp    	0  	0 0.0.0.0:22          	0.0.0.0:*           	LISTEN  	4564/sshd
         ```
 2. 若需要關閉 ssh 伺服器：`ansible app1 -m service -a "name=sshd state=stopped"`
-    * state 選項還有：`started`、`restarted`、`reloaded` 可供使用
+    * state 選項還有：`started`（啟動）、`restarted`（重新啟動）、`reloaded`（重新載入）可供使用
 3. 再次檢查被控端主機是否關閉 ssh 伺服器：`ansible app1 -m command -a "netstat -tunlp | grep 22"`
 
 ## user 模塊應用
