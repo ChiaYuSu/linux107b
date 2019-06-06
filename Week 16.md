@@ -83,7 +83,7 @@
 * 將主控端檔案**複製**至被控端
 1. 在主控端 root 根目錄下建立新檔案 a.txt：`echo "hi" > a.txt`
 2. 把 a.txt 拷貝至被控端（192.168.56.103）並做備份（因為有可能檔名是一樣的）：`ansible app1 -m copy -a "src=/root/a.txt dest=/tmp/a.txt backup=yes"`
-3. 到被控端 tmp 目錄下檢查（192.168.56.103）是否有成功將檔案拷貝過去：`cd /tmp` -> `ls`
+3. 接著可利用 `command` 模組輸入 `ansible app1 -m command -a "ls /tmp"` 到被控端 tmp 目錄下檢查（192.168.56.103）是否有成功將檔案拷貝過去
 
 ## fetch 模組應用
 
