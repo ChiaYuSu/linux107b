@@ -8,7 +8,7 @@
 
 ## 環境架設
 
-## 功能
+## 上課有講到功能
 ### copy
 * 將檔案從 master 端拷貝到 minion 端
 1. 首先，在 master 的 `/tmp` 目錄下建立一個 `test.txt` 的檔案，指令為 `cd /tmp` -> `echo "hello world" > test.txt`
@@ -42,8 +42,15 @@
 4. 若要確認是否有成功卸載套件，指令承第 2 步驟
 
 ### user
+* 在 minion 端增加 / 刪除使用者
+1. 
+2. 
+3. 
+
 
 ### group
+
+## 補充功能
 
 ## 延伸學習
 1. [SALTSTACK / EXECUTION MODULES](https://docs.saltstack.com/en/latest/ref/modules/all/index.html)
