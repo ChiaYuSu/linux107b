@@ -42,10 +42,12 @@
 4. 若要確認是否有成功卸載套件，指令承第 2 步驟
 
 ### user
-* 在 minion 端增加 / 刪除使用者
+* 在 minion 端增加 / 刪除 / 更改使用者
 1. 假設今天要在 minion 端新增一個名為 `test` 的使用者，指令為 `salt 'client' user.add "name=test"`
 2. 若想要確認使用者是否被成功新增，可以輸入 `salt 'client' user.getent | grep test`、若需要看到詳細資料（gid、groups、uid 等）需輸入 `salt 'client' user.getent`
 3. 若要刪除使用者可以輸入 `salt 'client' user.delete "name=test"`
+4. 若要更改使用者名稱可以輸入 `salt 'client' user.rename test test2`
+    > 這裡需要注意舊的 name 跟新的 name 之間不能加引號（""） 
 > 註記：user.add 可添加的參數還有 `uid`、`gid`、`groups`、`home`、`shell`、`unique`、`system`、`fullname`、`roomnumber`、`workphone`、`homephone`、`other`、`createhome`、`loginclass`、`root`、`nologinit`
 
 
