@@ -13,6 +13,7 @@
 * 將檔案從 master 端拷貝到 minion 端
 1. 首先，在 master 的 `/tmp` 目錄下建立一個 `test.txt` 的檔案，指令為 `cd /tmp` -> `echo "hello world" > test.txt`
 2. 將 master `test.txt` 拷貝至 minion 的 `/tmp` 目錄下，指令為 `salt-cp 'client' /tmp/test.txt /tmp`
+    > 這裡需要注意 **master 的路徑前面**跟 **minion 的路徑後面**不能加引號（""） 
 3. 完成後確認 minion 端是否真的有此檔案，指令為 `salt 'client' cmd.run "cat /tmp/test.txt"`
 
 
@@ -47,7 +48,7 @@
 2. 若想要確認使用者是否被成功新增，可以輸入 `salt 'client' user.getent | grep test`、若需要看到詳細資料（gid、groups、uid 等）需輸入 `salt 'client' user.getent`
 3. 若要刪除使用者可以輸入 `salt 'client' user.delete "name=test"`
 4. 若要更改使用者名稱可以輸入 `salt 'client' user.rename test test2`
-    > 這裡需要注意舊的 name 跟新的 name 之間不能加引號（""） 
+    > 這裡需要注意**舊的 name 前面**跟**新的 name 後面**不能加引號（""） 
 > 註記：user.add 可添加的參數還有 `uid`、`gid`、`groups`、`home`、`shell`、`unique`、`system`、`fullname`、`roomnumber`、`workphone`、`homephone`、`other`、`createhome`、`loginclass`、`root`、`nologinit`
 
 
