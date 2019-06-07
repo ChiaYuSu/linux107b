@@ -4,4 +4,10 @@
 
 ## 環境架設
 
-## 
+## 功能？
+* copy
+* remove
+* fetch
+* yum
+* user
+* group
