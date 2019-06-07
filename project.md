@@ -22,6 +22,7 @@
 2. 若要確認檔案（`test.txt`）有被刪除，可以輸入 `salt 'client' cmd.run "/tmp | grep test"`
 
 ### fetch
+
 ### yum
 * 在 minion 端安裝套件
 1. 假設今天我想在 minion 端安裝 `joe` 套件，指令為 `salt 'client' cmd.run "yum install joe -y"`
@@ -41,4 +42,5 @@
 4. 若要確認是否有成功卸載套件，指令承第 2 步驟
 
 ### user
+
 ### group
