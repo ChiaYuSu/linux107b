@@ -17,6 +17,10 @@
 
 
 ### remove
+* 刪除 minion 端檔案
+1. 假設今天需要刪除 minion 端 `/tmp` 目錄下的 `test.txt`，指令為 `salt 'client' cmd.run "rm /tmp/test.txt"`
+2. 若要確認檔案（`test.txt`）有被刪除，可以輸入 `salt 'client' cmd.run "/tmp | grep test"`
+
 ### fetch
 ### yum
 * 在 minion 端安裝套件
