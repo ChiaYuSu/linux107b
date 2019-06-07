@@ -2,9 +2,13 @@
 ## 主題
 * Saltstack
 
+## Saltstack 是什麼
+
+## Saltstack vs. Ansible vs. Puppet vs. Chef
+
 ## 環境架設
 
-## 功能？
+## 功能
 ### copy
 * 將檔案從 master 拷貝到 minion
 1. 首先，在 master 的 `/tmp` 目錄下建立一個 `test.txt` 的檔案，指令為 `cd /tmp` -> `echo "hello world" > test.txt`
