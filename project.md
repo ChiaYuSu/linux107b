@@ -44,3 +44,6 @@
 ### user
 
 ### group
+
+## 延伸學習
+1. [SALTSTACK / EXECUTION MODULES](https://docs.saltstack.com/en/latest/ref/modules/all/index.html)
