@@ -75,11 +75,11 @@
         Rejected Keys:
         ```
         > 補充，選項還有以下幾種：<br>
-        `salt-key -a client-1`：接受 `client-1` 主機<br>
+        `salt-key -a server-1`：接受 `server-1` 主機<br>
         `salt-key -A`：接受所有主機<br>
-        `salt-key -d client-2`：刪除 `client-2` 主機<br>
+        `salt-key -d server-2`：刪除 `server-2` 主機<br>
         `salt-key -D`：刪除所有主機
-
+3. 當兩台 server
 
 
 ## 上課有講到功能
