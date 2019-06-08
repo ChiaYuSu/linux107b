@@ -79,8 +79,15 @@
         `salt-key -A`：接受所有主機<br>
         `salt-key -d server-2`：刪除 `server-2` 主機<br>
         `salt-key -D`：刪除所有主機
-3. 當兩台 server
-
+3. 當兩台 server 端主機都成功被接受就可以開始測試啦，我們可以輸入 `salt '*' test.ping` 測試是否有配置成功
+    * 成功配置結果如下：
+        ```
+        [root@localhost salt]# salt '*' test.ping
+        server-1:
+            True
+        server-2:
+            True
+        ```
 
 ## 上課有講到功能
 ### copy
