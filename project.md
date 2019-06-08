@@ -21,12 +21,12 @@
 3. 關閉防火牆：`systemctl disable firewalld`（檢查防火牆是否為關閉狀態：`systemctl status firewalld`）
     > 也可以選擇加入防火牆例外規則 `sudo firewall-cmd --add-port=4505/tcp --permanent`、`sudo firewall-cmd --add-port=4506/tcp --permanent`
 4. 檢查 4505 port 及 4506 port 是否為 LISTEN 狀態：`netstat -tunlp | grep -e 4505 -e 4606`
-    > 4505 port：設置 master 與 minion 的認證通信端口
+    > 4505 port：設置 master 與 minion 的認證通信端口<br>
     > 4506 port：master 用來發送訊息或者接受 minion 傳回的訊息
 5. 啟動 `salt-master` 套件：`systemctl start salt-master`
     > 若想要讓套件下次開機就自動啟動可以再輸入此指令：`systemctl enable salt-master`
 6. 更改 `salt-master` 配置檔：`gedit /etc/salt/master`
-    > `interface: 0.0.0.0`
+    > `interface: 0.0.0.0`<br>
     > `auto-accept: True`（選擇性設定）
 7. 更改 `salt-minion` 配置檔：`gedit /etc/salt/minion`
     > `master: master`
