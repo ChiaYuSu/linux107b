@@ -116,3 +116,6 @@ make install # 安裝至系統目錄
 
 ## 延伸學習
 1. [Linux 技術手札 / CentOS 7 關閉防火牆及 SELinux](https://www.opencli.com/linux/centos-7-disable-firewalld-selinux)
+2. [G. T. Wang / Linux 使用 rsync 遠端檔案同步與備份工具教學與範例](https://blog.gtwang.org/linux/rsync-local-remote-file-synchronization-commands/)
+3. [Linux命令大全 / rsync命令](http://man.linuxde.net/rsync)
+4. [Linux命令大全 / inotifywait命令](http://man.linuxde.net/inotifywait)
