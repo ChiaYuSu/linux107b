@@ -24,7 +24,7 @@
 * 它的設計可以讓插件的開發者很有發揮的空間。Nagios 的核心裡包含了所有的功能，是以 C 語言寫成的。但是監視的插件是獨立於核心之外，這些插件可以用任何語言寫成，只要是輸入與輸出的結果能夠照者核心所能認識的格式，插件本身是如何被開發是完全自由的
 
 ## 監控端 Server 步驟
-1. `yum install epel-release`
+1. `yum install epel-release`：安裝第三方軟體資料庫，未來會常使用到
 2. `yum install httpd nagios* nrpe`
 3. `systemctl start httpd`
 4. `systemctl start nagios`
@@ -32,15 +32,15 @@
 6. `systemctl restart httpd`
 7. `systemctl restart nagios`
 8. `cd /etc/nagios/projects`
-9. `gedit localhost.cfg`
+9. `gedit localhost.cfg`：編輯配置檔
 10. 新增 define host (web1)
-11. `systemctl restart nagios`
+11. `systemctl restart nagios`：重啟 nagios
+12. 查看管理端介面是否多了 web1
 
 ## 被控端 Server 步驟
 1. `yum install epel-release nrpe nagios-plugin*`
-2. `gedit /etc/nagios/nrpe.cfg`
-3. allow host 新增監控端 server IP
+2. `gedit /etc/nagios/nrpe.cfg`：編輯配置檔（新增 allow host 新增監控端 server ip）
 4. `systemctl restart nrpe`
 
 ## 延伸學習
-1. []()
+1. [行政院國家資通安全會報技術服務中心 / 系統監看工具 Nagios 簡易安裝教學](http://www.nccst.nat.gov.tw/ArticlesDetail?lang=zh&seq=1106)
