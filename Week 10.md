@@ -19,6 +19,16 @@
 * CentOS 7.0-1 (web-1)：intnet
 * CentOS 7.0-2 (web-2)：intnet
 
+## 負載均衡器（Keepalived + LVS）
+* keepalived：容錯
+* LVS：傳輸效能提升
+    * 全名：Linux Virtual Server
+    * 虛擬的服務器集群系統
+    * 屬於第 4 層（傳輸層）負載平衡器
+
+## 作業
+* 由於今天上課老師講的比較快，因此有點來不及做筆記
+
 ## 延伸學習
 1. [Linux运维日志 centos.bz/LVS Keepalived双机高可用负载均衡搭建](https://www.centos.bz/2017/07/lvs-keepalived-ha-loadbalace/)
 2. [Linux运维日志 centos.bz/lvs详细介绍及lvs和keepalived的使用](https://www.centos.bz/2017/09/lvs-intro-and-lvs-keepalived/)
