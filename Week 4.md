@@ -1,59 +1,9 @@
 # 第四週筆記
-## 為何要學習通配符以及正則表達式
-* 面對一堆文本需要分析
-* 面對一堆數據需要處理
-* 面對冗長的伺服器日誌找錯誤
-    + 例：`sed -n '/Error/p' fresh.log | awk '{print $1}'`
+## 複習上週講的通配符
+* 可參考延伸學習第 1 點
 
-## 通配符與正則表達式
-* 通配符和正則表達式看起來有點像，要注意部要混淆了
-    * 通配符：用來匹配符合條件的文件名，通常只有 `*`、`?`、`[]`、`{}`這四種
-    * 正則表達式：用來匹配符合條件的檔案內容
-
-## Linux 三劍客
-* sed (stream editor)：行編輯器
-* awk：文本處理工具
-* grep (global search regular expression(RE) and print out the line)：查找
-
-## 從基礎至應用 (三個學習階段)
-1. 正則表達式 (sed 及 awk 學習的基礎)
-2. sed 基本處理命令
-3. awk 更為複雜的文本處裡
-
-## 正則表達式應用的場景
-* 查找所有包含 `linux` 的行
-* 取出以 `abc` 開頭的所有單詞
-* 匹配兩位數、密碼、qq號、身分證字號等
-
-## 正則表達式
-指令格式：`grep 'match_pattern' file_name`
-1. 單個字符表示
-    * 特定字符：
-        * 某個具體的字符 `1`、`a`
-    * 範圍字符：
-        * 數字字符 `[0-9]`
-        * 小寫字符 `[a-z]`
-        * 大寫字符 `[A-Z]`
-        * 符號字符 `[,:_/]`
-        * 反向字符 `[^]` (反向字符 `^` 一定要在中括號 `[]` 內)
-    * 任意字符：
-        * 任何一個字符 `.` (`[.]`、`\.` 這裡的小數點代表包含小數點的文本 ( `\` 代表跳脫字符)，`.` 代表任何一個字符，兩者代表的意思不同)
-    * 其他字符：
-        * 頭字符 `^` (`[^]` 代表範圍內的反向字符，`^` 代表頭字符，兩者代表意思不同)
-        * 尾字符 `$`
-        * 空行 `^$` (`^$` 若該行有按空白鍵 (space) 的話則不會印出，linux 會識別為該行有文本存在)
-    * 元字符：
-        * 任何字類字符 `\w` (同等於 `[A-Za-z0-9_]`)
-        * 任何非字類字符 `\W` (同等於 `[^A-Za-z0-9_]`)
-        * 單詞的分割 (`'\bx\b'` 僅搜尋代表密碼的 `x`，不包含非密碼的 `x`)
-2. 字符串表示
-    * 字符組合 (固定次數)：
-        * 代表零次或多次 `*` (同等於 `{0, }` )
-        * 代表一次或多次 `+` (同等於 `{1, }` )
-        * 代表零次或一次 `?` (同等於 `{0,1}` )
-    * 字符組合 (重複特定次數)：
-        * 重複特定次數 `{m,n}` (`m` 代表重複次數最小值，`n` 代表重複次數最大值)
-3. 表達式
+## 反向解析伺服器
+* `dig -x [ip] @DNS Server`：建置成功後，輸入此指令測試是否成功
 
 ## Docker 安裝
 1. CentOS 7 有內建 Docker 套件，以 yum 指令透過網路安裝最新套件 `yum -y install docker`
@@ -83,7 +33,6 @@
 4. 最後將重命名的 docker push 至 Docker 官網，指令為 `docker push new_name/new_server:new_tag`
 
 ## 延伸學習
-1. [慕课网 / 实例妙解Sed和Awk的秘密](https://www.imooc.com/learn/819)
-2. [鳥哥的 Linux 的私房菜 / 第十一章、正規表示法與文件格式化處理](http://linux.vbird.org/linux_basic/0330regularex.php)
-3. [Docker官網 / Docker: Enterprise Application Container Platform](https://www.docker.com/)
+1. [51CTO 博客 / linux通配符和正则表达式](https://blog.51cto.com/qibingtuan/1970593)
+2. [Docker官網 / Docker: Enterprise Application Container Platform](https://www.docker.com/)
 
