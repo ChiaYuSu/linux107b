@@ -67,38 +67,19 @@
     * ansible
     * puppet
 
+## 腳本
+* 應用如偵測 ARP 攻擊
+* 易於管理與維護
+
+## 網路電話（VoIP）
+* 可以參考延伸學習的第 2 點
+
 ## 直播系統
-
-## 連進機房方式
-* PuTTY
-* SecureCRT
-* XShell
-
-## 遠端桌面
-* VNC
-
-## 遠端桌面軟體
-* mstsc
-
-## 檢查埠號是否被占用
-* `netstat -an | findstr XXX`
-
-## ip 查詢
-* ipconfig
-
-## 常用埠號整理
-* 遠端桌面埠號：3389
-* My SQL 埠號：3306
-
-## ip 為 0.0.0.0 代表什麼意思
-* 尚未取得 ip
-* 伺服器
-* 內定路由
-
-## Linux 最重要的三劍客
-* `sed`
-* `awk`
-* `grep`
+* 可以參考延伸學習的第 3 點
+* RTMP：直播串流用的通訊協定
+* iPhone 使用者可以在 App Store 下載 mPlayer 做測試
 
 ## 延伸學習
-1.[鳥哥的 Linux 私房菜 / 第十七章、區網控制者： Proxy 伺服器](http://linux.vbird.org/linux_server/0420squid.php)
+1. [鳥哥的 Linux 私房菜 / 第十七章、區網控制者： Proxy 伺服器](http://linux.vbird.org/linux_server/0420squid.php)
+2. [SIP:WISE / Build your own VoIP System – Part 2: An open Skype Replacement](https://www.sipwise.org/news/technical/byov-skype-replacement/)
+3. [简书 / 在Centos7上搭建Nginx+rtmp服务器](https://www.jianshu.com/p/4ed63b041bd9)
