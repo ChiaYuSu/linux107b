@@ -94,11 +94,13 @@
 2. 將 master `test.txt` 拷貝至 minion 的 `/tmp` 目錄下，指令為 `salt-cp '*' /tmp/test.txt /tmp`
     > 這裡需要注意 **master 的路徑前面**跟 **minion 的路徑後面**不能加引號（""） 
 3. 完成後確認 minion 端是否真的有此檔案，指令為 `salt '*' cmd.run "cat /tmp/test.txt"`
+> [Demo 影片](https://drive.google.com/open?id=1AIWK501iWae4kXmhWcseQ-GKGqiS5hhc)
 
 ### remove
 * 刪除 minion 端檔案
 1. 假設今天需要刪除 minion 端 `/tmp` 目錄下的 `test.txt`，指令為 `salt '*' cmd.run "rm /tmp/test.txt"`
 2. 若要確認檔案（`test.txt`）有被刪除，可以輸入 `salt '*' cmd.run "/tmp | grep test"`
+> [Demo 影片](https://drive.google.com/open?id=1STPij9DA5_-KK0HBv9_TQ3RH6NvJQ75n)
 
 ### yum
 * 在 minion 端安裝套件
@@ -117,6 +119,7 @@
         ```
 3. 安裝完套件後若要卸載可輸入 `salt '*' cmd.run "rpm -e joe"`
 4. 若要確認是否有成功卸載套件，指令承第 2 步驟
+> [Demo 影片](https://drive.google.com/open?id=1JnWpfQwdDhcHE2n0fWIkxYhUM9h2H_G0)
 
 ### user
 * 在 minion 端增加 / 刪除 / 更改使用者
@@ -126,6 +129,7 @@
 4. 若要更改使用者名稱可以輸入 `salt '*' user.rename test test2`
     > 這裡需要注意**舊的 name 前面**跟**新的 name 後面**不能加引號（""） 
 > 註記：user.add 可添加的參數還有 `uid`、`gid`、`groups`、`home`、`shell`、`unique`、`system`、`fullname`、`roomnumber`、`workphone`、`homephone`、`other`、`createhome`、`loginclass`、`root`、`nologinit`
+> [Demo 影片](https://drive.google.com/open?id=1TVWysxYfqycgXtI0dr0kVFRPut4jwMCd)
 
 ## 補充功能
 ### manage
@@ -133,10 +137,12 @@
 1. 查看有哪些機器是開啟的，指令為 `salt-run manage.up`
 2. 查看有哪些機器是關閉的，指令為 `salt-run manage.down`
 3. 同時查看兩種狀態，指令為 `salt-run manage.status`
+> [Demo 影片](https://drive.google.com/open?id=1i-UhoViDDQpHGevJR6yfeAyW2PeEhirb)
 
 ### grains
 * 查看 minion 端機器是用什麼系統（OS）
 1. 查看所有 minion 端機器的系統，指令為 `salt '*' grains.item os`
+> [Demo 影片](https://drive.google.com/open?id=1mx8TvmeHb3pndrGcwtvluFjwAlCY4vzq)
 
 ### system 
 * 切換 minion 端機器狀態
@@ -144,15 +150,18 @@
 2. 將所有 minion 端機器狀態改成**圖形化**介面，指令為 `salt '*' system.init 5`
 3. 將所有 minion 端機器重新啟動，指令為 `salt '*' system.reboot` 
 4. 將所有 minion 端機器關機，指令為 `salt '*' system.poweroff` 
+> [Demo 影片](https://drive.google.com/open?id=17CDqEyhgPC3RT2Nagqv9XQYz0wW5njWQ)
 
 ### call
 * 查看 minion 端機器狀態
 > 注意：此指令只能在 minion 端機器上單獨操作，不可在 master 端機器上操作
 1. 在 minion 端機器上測試 salt-minion 是否正常，指令為 `salt-call "test.ping"`
 2. 另外還可以在做個簡單測試，確認是否 salt-minion 有正常運作，指令為 `salt-call "ifconfig"`
+> [Demo 影片](https://drive.google.com/open?id=1pSnwLZCZcRRYhr6ZSiYn21cALpo9Fn1N)
 
 
 ## 簡報參考
+* []()
 
 ## 延伸學習
 1. [SALTSTACK / EXECUTION MODULES](https://docs.saltstack.com/en/latest/ref/modules/all/index.html)
