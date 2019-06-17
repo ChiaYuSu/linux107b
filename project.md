@@ -6,7 +6,7 @@
 * Saltstack 是一個服務器基礎架構**集中化管理平臺**，具備配置管理、遠程執行、監控等功能，通過部署 Saltstack 環境，我們可以在**成千上萬臺服務器**上做到批量執行命令，根據不同業務特性進行配置集中化管理、分發文件、采集服務器數據、操作系統基礎等
 
 ## Saltstack vs. Ansible vs. Puppet vs. Chef
-![](project\compare.PNG)
+* ![](project\compare.PNG)
 
 ## 環境架設
 * 準備兩台以上的機器（筆者測試環境為 3 台）
