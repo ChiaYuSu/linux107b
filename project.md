@@ -3,8 +3,10 @@
 * Saltstack
 
 ## Saltstack 是什麼
+* Saltstack 是一個服務器基礎架構**集中化管理平臺**，具備配置管理、遠程執行、監控等功能，通過部署 Saltstack 環境，我們可以在**成千上萬臺服務器**上做到批量執行命令，根據不同業務特性進行配置集中化管理、分發文件、采集服務器數據、操作系統基礎等
 
 ## Saltstack vs. Ansible vs. Puppet vs. Chef
+<img src="project\compare.png" width="550px" /> <br>
 
 ## 環境架設
 * 準備兩台以上的機器（筆者測試環境為 3 台）
@@ -43,11 +45,7 @@
     > `master: 192.168.56.102
 
 ### Server-2 端
-1. 
-2. 
-3. 
-4. 
-
+* 環境配置方式類似 Server-1 端，僅是系統不同而已但指令大同小異
 * 以上配置完成沒問題，就請大家回到第一台機器準備做**配置認證**以及**測試**啦！
 
 ## 環境配置認證及測試
@@ -97,13 +95,10 @@
     > 這裡需要注意 **master 的路徑前面**跟 **minion 的路徑後面**不能加引號（""） 
 3. 完成後確認 minion 端是否真的有此檔案，指令為 `salt '*' cmd.run "cat /tmp/test.txt"`
 
-
 ### remove
 * 刪除 minion 端檔案
 1. 假設今天需要刪除 minion 端 `/tmp` 目錄下的 `test.txt`，指令為 `salt '*' cmd.run "rm /tmp/test.txt"`
 2. 若要確認檔案（`test.txt`）有被刪除，可以輸入 `salt '*' cmd.run "/tmp | grep test"`
-
-### fetch
 
 ### yum
 * 在 minion 端安裝套件
@@ -132,10 +127,42 @@
     > 這裡需要注意**舊的 name 前面**跟**新的 name 後面**不能加引號（""） 
 > 註記：user.add 可添加的參數還有 `uid`、`gid`、`groups`、`home`、`shell`、`unique`、`system`、`fullname`、`roomnumber`、`workphone`、`homephone`、`other`、`createhome`、`loginclass`、`root`、`nologinit`
 
-
-### group
-
 ## 補充功能
+### manage
+* 查看 minion 端機器狀態（開啟 -- up 或關閉 -- down）
+1. 查看有哪些機器是開啟的，指令為 `salt-run manage.up`
+2. 查看有哪些機器是關閉的，指令為 `salt-run manage.down`
+3. 同時查看兩種狀態，指令為 `salt-run manage.status`
+
+### grains
+* 查看 minion 端機器是用什麼系統（OS）
+1. 查看所有 minion 端機器的系統，指令為 `salt '*' grains.item os`
+
+### system 
+* 切換 minion 端機器狀態
+1. 將所有 minion 端機器狀態改成**文字化**介面，指令為 `salt '*' system.init 3`
+2. 將所有 minion 端機器狀態改成**圖形化**介面，指令為 `salt '*' system.init 5`
+3. 將所有 minion 端機器重新啟動，指令為 `salt '*' system.reboot` 
+4. 將所有 minion 端機器關機，指令為 `salt '*' system.poweroff` 
+
+### call
+* 查看 minion 端機器狀態
+> 注意：此指令只能在 minion 端機器上單獨操作，不可在 master 端機器上操作
+1. 在 minion 端機器上測試 salt-minion 是否正常，指令為 `salt-call "test.ping"`
+2. 另外還可以在做個簡單測試，確認是否 salt-minion 有正常運作，指令為 `salt-call "ifconfig"`
+
+
+## 簡報參考
 
 ## 延伸學習
 1. [SALTSTACK / EXECUTION MODULES](https://docs.saltstack.com/en/latest/ref/modules/all/index.html)
+2. [Jiang Jun / Salt (1) 入门](http://ohmystack.com/articles/salt-1-basic)
+3. [CSDN wjacketcn / salt常用命令、模块、执行](https://blog.csdn.net/wjacketcn/article/details/50853604)
+4. [S小魚仔S Centos 7 SaltStack 自動化運維工具](http://my-fish-it.blogspot.com/2017/08/ss-centos-7-saltstack.html)
+5. [ITREAD<sup>01</sup> / 自動化運維工具之SaltStack-1、SaltStack介紹及安裝](https://www.itread01.com/content/1516005485.html)
+6. [ITREAD<sup>01</sup> / saltstack介紹](https://www.itread01.com/content/1502442243.html)
+7. [雪花新聞 OpenSkill / 部署管理工具：Chef vs Puppet vs Ansible vs SaltStack vs Fabric](https://www.xuehua.us/2018/06/30/%E9%83%A8%E7%BD%B2%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%EF%BC%9Achef-vs-puppet-vs-ansible-vs-saltstack-vs-fabric/zh-tw/)
+8. [运维之路 / SaltStack介绍和架构解析](http://www.361way.com/saltstack-framework/4918.html)
+9. [学时网 water / 一、关于salt简介，安装和基本配置](http://www.xuetimes.com/archives/750)
+10. [minseo / Saltstack自动化运维](https://www.cnblogs.com/minseo/p/6816042.html)
+11. [台部落 zclinux_/ 【Linux】saltstack的使用詳解 超詳細](https://www.twblogs.net/a/5b7ae9de2b7177392c97165d)
