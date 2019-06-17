@@ -40,13 +40,11 @@ user 	pts/0	:0           	00:33	1.00s  0.03s  0.00s w
 * 數據包在 4 張表、5 條鏈匹配流程<br>
     <img src="Week15/process.PNG" width="550px" /> 
 
-## 作業
-* iptables 配置
-1. **規則一：** 對所有的地址開放本機的 tcp (80、22、10-21) 端口的訪問
-2. **規則二：** 允許對所有的地址開放本機的基於 ICMP 協議的數據包訪問
-3. **規則三：** 其他未被允許的端口則禁止訪問
-
-* [防火牆地址轉換 SNAT 及 DNAT](https://blog.csdn.net/chengxuyuanyonghu/article/details/64441374)
+## 網路 ip
+* Class A（1.0.0.0 ～ 126.255.255.255）
+* Class B（128.0.0.0 ～ 191.255.255.255）
+* Class C（192.0.0.0 ～ 255.255.255.255）
 
 ## 延伸學習
 1. [慕课网 imooc / 用iptables搭建一套强大的安全防护盾](https://www.imooc.com/learn/389)
+2. [防火牆地址轉換 SNAT 及 DNAT](https://blog.csdn.net/chengxuyuanyonghu/article/details/64441374)
