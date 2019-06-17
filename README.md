@@ -4,6 +4,6 @@
 * 最後，感謝老師這學期的教導
 
 # 關於此份筆記
-* 作　　者：國立金門大學資訊工程學系三年級 蘇家禹
+* 作　　者：[國立金門大學資工系三年級](https://www.nqu.edu.tw/educsie/) [蘇家禹](https://github.com/ChiaYuSu)
 * 指導老師：[柯志亨 老師](http://csie.nqu.edu.tw/smallko/)
 * 筆記內容：107 學年度下學期 -- Linux系統自動化運維
