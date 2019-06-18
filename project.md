@@ -129,6 +129,7 @@
 4. 若要更改使用者名稱可以輸入 `salt '*' user.rename test test2`
     > 這裡需要注意**舊的 name 前面**跟**新的 name 後面**不能加引號（""） 
 > 註記：user.add 可添加的參數還有 `uid`、`gid`、`groups`、`home`、`shell`、`unique`、`system`、`fullname`、`roomnumber`、`workphone`、`homephone`、`other`、`createhome`、`loginclass`、`root`、`nologinit`
+
 > [Demo 影片](https://drive.google.com/open?id=1TVWysxYfqycgXtI0dr0kVFRPut4jwMCd)
 
 ## 補充功能
